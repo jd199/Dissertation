@@ -1,0 +1,45 @@
+//Libraries
+#include <Wire.h>
+#include "SparkFunHTU21D.h"
+#include <BMP280_DEV.h>    
+//Create an instance of the object.
+HTU21D myHumidity;
+float temperature, pressure, altitude;
+BMP280_DEV bmp280;
+int count = 0;
+void setup()
+{
+  // Baudrate
+  Serial.begin(9600);
+  //Declare instances in void setup to initiate them.
+  bmp280.begin(BMP280_I2C_ALT_ADDR);
+  bmp280.startNormalConversion();
+  Serial.println(count);
+  myHumidity.begin();
+  Serial.println("humidity");
+}
+void loop()
+{
+  //While loop count up to 1000 measurements and stop.
+  while (count<=1003) {
+  //Count++, declared to continue counting when measurements are taken until 1,000 measurements are taken.
+count++;
+  //Print data for humidity, temperature, air pressure and altitude. 
+  float Humidity = myHumidity.readHumidity();
+  (bmp280.getMeasurements(temperature, pressure, altitude));
+  Serial.print(count);
+  Serial.print("          ");
+  Serial.print(Humidity, 2);
+  Serial.print("            ");
+  Serial.print(temperature, 2);
+  Serial.print("            ");
+  Serial.print(pressure, 2);    
+  Serial.print("            ");
+  Serial.println("          "); 
+  //Delay of 1 seconds between each measurement recorded. 
+  delay(1000);  
+}
+}
+
+
+//Sparkfun, 2022 [40] and Arduino Project Hub, 2019 [41]
