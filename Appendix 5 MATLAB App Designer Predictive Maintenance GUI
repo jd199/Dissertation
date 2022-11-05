@@ -1516,7 +1516,7 @@ classdef Predictive_Maintenance_GUI_Joshua_Donald < matlab.apps.AppBase
          humidity=test2.Humidity(index); % Attain data from test2.
          time=test2.Time(index); % Record set point violations.
          
-         index2=find(test2.Humidity>=high & test1.Humidity<=highhigh); % Create fault log for test 2 humidity high set point violations.
+         index2=find(test2.Humidity>=high & test2.Humidity<=highhigh); % Create fault log for test 2 humidity high set point violations.
          humidity2=test2.Humidity(index2); % Attain data from test2.
          time2=test2.Time(index2); % Record set point violations. 
          
@@ -6699,239 +6699,239 @@ classdef Predictive_Maintenance_GUI_Joshua_Donald < matlab.apps.AppBase
 
             % Create UIFigure and hide until all components are created
             app.UIFigure = uifigure('Visible', 'off');
-            app.UIFigure.Position = [100 100 1680 880];
+            app.UIFigure.Position = [100 100 1751 877];
             app.UIFigure.Name = 'MATLAB App';
 
             % Create HoldButton
             app.HoldButton = uibutton(app.UIFigure, 'push');
             app.HoldButton.ButtonPushedFcn = createCallbackFcn(app, @HoldButtonPushed, true);
             app.HoldButton.FontWeight = 'bold';
-            app.HoldButton.Position = [287 374 61 29];
+            app.HoldButton.Position = [265 371 61 29];
             app.HoldButton.Text = 'Hold';
 
             % Create Image
             app.Image = uiimage(app.UIFigure);
-            app.Image.Position = [1533 805 100 100];
+            app.Image.Position = [1634 815 100 100];
             app.Image.ImageSource = 'Screenshot 2022-06-30 at 20.08.36.png';
 
             % Create Image_2
             app.Image_2 = uiimage(app.UIFigure);
-            app.Image_2.Position = [1371 805 100 100];
+            app.Image_2.Position = [1493 815 100 100];
             app.Image_2.ImageSource = 'Screenshot 2022-06-30 at 20.10.16.png';
 
             % Create Image_3
             app.Image_3 = uiimage(app.UIFigure);
-            app.Image_3.Position = [18 805 100 100];
+            app.Image_3.Position = [18 815 100 100];
             app.Image_3.ImageSource = 'Screenshot 2022-06-30 at 20.11.58.png';
 
             % Create GloveboxEnvironmentMonitoringSystemLabel
             app.GloveboxEnvironmentMonitoringSystemLabel = uilabel(app.UIFigure);
             app.GloveboxEnvironmentMonitoringSystemLabel.FontSize = 20;
             app.GloveboxEnvironmentMonitoringSystemLabel.FontWeight = 'bold';
-            app.GloveboxEnvironmentMonitoringSystemLabel.Position = [629 842 414 27];
+            app.GloveboxEnvironmentMonitoringSystemLabel.Position = [670 839 414 27];
             app.GloveboxEnvironmentMonitoringSystemLabel.Text = 'Glovebox Environment Monitoring System';
 
             % Create TemperatureDropDownLabel
             app.TemperatureDropDownLabel = uilabel(app.UIFigure);
             app.TemperatureDropDownLabel.HorizontalAlignment = 'right';
             app.TemperatureDropDownLabel.FontWeight = 'bold';
-            app.TemperatureDropDownLabel.Position = [20 775 78 22];
+            app.TemperatureDropDownLabel.Position = [20 772 78 22];
             app.TemperatureDropDownLabel.Text = 'Temperature';
 
             % Create TemperatureDropDown
             app.TemperatureDropDown = uidropdown(app.UIFigure);
             app.TemperatureDropDown.Items = {'Test 1 vacuum pump on, no radioactive or oxidising material present (Temperature)', 'Test 2 vacuum pump off, no radioactive or oxidising material present (Temperature)', 'Test 3 185kBq radioactive source present and oxidising material not present (Temperature)', 'Test 4 40kBq radioactive source present and oxidising material not present (Temperature)', 'Test 5 0.5M Sodium Hydroxide present and radioactive source not present (Temperature)', 'Test 6 0.01M Sodium Hydroxide present and radioactive source not present (Temperature)', 'Test 7 vacuum pump on, no radioactive or oxidising material present, temperature increased (Temperature)', 'Test 8 vacuum pump off, no radioactive or oxidising material present, temperature increased (Temperature)', 'Test 9 vacuum pump on, no radioactive or oxidising material present, temperature decreased (Temperature)', 'Test 10 vacuum pump off, no radioactive or oxidising material present, temperature decreased (Temperature)', 'Test 11 vacuum pump on, no radioactive or oxidising material present, humidity increased (Temperature)', 'Test 12 vacuum pump off, no radioactive or oxidising material present, humidity increased (Temperature)', 'Test 13 vacuum pump on, no radioactive or oxidising material present, humidity and temperature increased (Temperature)', 'Test 14 vacuum pump off, no radioactive or oxidising material present, humidity and temperature increased (Temperature)', 'Test 15 vacuum pump on, no radioactive or oxidising material present, humidity increased and temperature decreased (Temperature)', 'Test 16 vacuum pump off, no radioactive or oxidising material present, humidity increased and temperature decreased (Temperature)', 'Test 17 vacuum pump on, no radioactive or oxidising material present, humidity decreased (Temperature)', 'Test 18 vacuum pump off, no radioactive or oxidising material present, humidity decreased (Temperature)', 'Test 19 vacuum pump on, no radioactive or oxidising material present, humidity decreased and temperature increased (Temperature)', 'Test 20 vacuum pump off, no radioactive or oxidising material present, humidity decreased and temperature increased (Temperature)', 'Test 21 vacuum pump on, no radioactive or oxidising material present, humidity and temperature decreased (Temperature)', 'Test 22 vacuum pump off, no radioactive or oxidising material present, humidity and temperature decreased (Temperature)', 'blank'};
-            app.TemperatureDropDown.Position = [113 775 402 20];
+            app.TemperatureDropDown.Position = [101 772 402 20];
             app.TemperatureDropDown.Value = 'blank';
 
             % Create HumidityDropDownLabel
             app.HumidityDropDownLabel = uilabel(app.UIFigure);
             app.HumidityDropDownLabel.HorizontalAlignment = 'right';
             app.HumidityDropDownLabel.FontWeight = 'bold';
-            app.HumidityDropDownLabel.Position = [42 689 56 22];
+            app.HumidityDropDownLabel.Position = [30 686 56 22];
             app.HumidityDropDownLabel.Text = 'Humidity';
 
             % Create HumidityDropDown
             app.HumidityDropDown = uidropdown(app.UIFigure);
             app.HumidityDropDown.Items = {'Test 1 vacuum pump on, no radioactive or oxidising material present (Humidity)', 'Test 2 vacuum pump off, no radioactive or oxidising material present (Humidity)', 'Test 3 185kBq radioactive source present and oxidising material not present (Humidity)', 'Test 4 40kBq radioactive source present and oxidising material not present (Humidity)', 'Test 5 0.5M Sodium Hydroxide present and radioactive source not present (Humidity)', 'Test 6 0.01M Sodium Hydroxide present and radioactive source not present (Humidity)', 'Test 7 vacuum pump on, no radioactive or oxidising material present, temperature increased (Humidity)', 'Test 8 vacuum pump off, no radioactive or oxidising material present, temperature increased (Humidity)', 'Test 9 vacuum pump on, no radioactive or oxidising material present, temperature decreased (Humidity)', 'Test 10 vacuum pump off, no radioactive or oxidising material present, temperature decreased (Humidity)', 'Test 11 vacuum pump on, no radioactive or oxidising material present, humidity increased (Humidity)', 'Test 12 vacuum pump off, no radioactive or oxidising material present, humidity increased (Humidity)', 'Test 13 vacuum pump on, no radioactive or oxidising material present, humidity and temperature increased (Humidity)', 'Test 14 vacuum pump off, no radioactive or oxidising material present, humidity and temperature increased (Humidity)', 'Test 15 vacuum pump on, no radioactive or oxidising material present, humidity increased and temperature decreased (Humidity)', 'Test 16 vacuum pump off, no radioactive or oxidising material present, humidity increased and temperature decreased (Humidity)', 'Test 17 vacuum pump on, no radioactive or oxidising material present, humidity decreased (Humidity)', 'Test 18 vacuum pump off, no radioactive or oxidising material present, humidity decreased (Humidity)', 'Test 19 vacuum pump on, no radioactive or oxidising material present, humidity decreased and temperature increased (Humidity)', 'Test 20 vacuum pump off, no radioactive or acetone sources present, humidity decreased and temperature increased (Humidity)', 'Test 21 vacuum pump on, no radioactive or oxidising material present, humidity and temperature decreased (Humidity)', 'Test 22 vacuum pump off, no radioactive or oxidising material present, humidity and temperature decreased (Humidity)', 'blank'};
-            app.HumidityDropDown.Position = [113 689 402 20];
+            app.HumidityDropDown.Position = [101 686 402 20];
             app.HumidityDropDown.Value = 'blank';
 
             % Create PressureDropDownLabel
             app.PressureDropDownLabel = uilabel(app.UIFigure);
             app.PressureDropDownLabel.HorizontalAlignment = 'right';
             app.PressureDropDownLabel.FontWeight = 'bold';
-            app.PressureDropDownLabel.Position = [42 607 56 22];
+            app.PressureDropDownLabel.Position = [30 604 56 22];
             app.PressureDropDownLabel.Text = 'Pressure';
 
             % Create PressureDropDown
             app.PressureDropDown = uidropdown(app.UIFigure);
             app.PressureDropDown.Items = {'Test 1 vacuum pump on, no radioactive or oxidising material present (Pressure)', 'Test 2 vacuum pump off, no radioactive or oxidising material present (Pressure)', 'Test 3 185kBq radioactive source present and oxidising material not present (Pressure)', 'Test 4 40kBq radioactive source present and oxidising material not present (Pressure)', 'Test 5 0.5M Sodium Hydroxide present and radioactive source not present (Pressure)', 'Test 6 0.01M Sodium Hydroxide present and radioactive source not present (Pressure)', 'Test 7 vacuum pump on, no radioactive or oxidising material present, temperature increased (Pressure)', 'Test 8 vacuum pump off, no radioactive or oxidising material present, temperature increased (Pressure)', 'Test 9 vacuum pump on, no radioactive or oxidising material present, temperature decreased (Pressure)', 'Test 10 vacuum pump off, no radioactive or oxidising material present, temperature decreased (Pressure)', 'Test 11 vacuum pump on, no radioactive or oxidising material present, humidity increased (Pressure)', 'Test 12 vacuum pump off, no radioactive or oxidising material present, humidity increased (Pressure)', 'Test 13 vacuum pump on, no radioactive or oxidising material present, humidity and temperature increased (Pressure)', 'Test 14 vacuum pump off, no radioactive or oxidising material present, humidity and temperature increased (Pressure)', 'Test 15 vacuum pump on, no radioactive or oxidising material present, humidity increased and temperature decreased (Pressure)', 'Test 16 vacuum pump off, no radioactive or oxidising material present, humidity increased and temperature decreased (Pressure)', 'Test 17 vacuum pump on, no radioactive or oxidising material present, humidity decreased (Pressure)', 'Test 18 vacuum pump off, no radioactive or oxidising material present, humidity decreased (Pressure)', 'Test 19 vacuum pump on, no radioactive or oxidising material present, humidity decreased and temperature increased (Pressure)', 'Test 20 vacuum pump off, no radioactive or acetone sources present, humidity decreased and temperature increased (Pressure)', 'Test 21 vacuum pump on, no radioactive or oxidising material present, humidity and temperature decreased (Pressure)', 'Test 22 vacuum pump off, no radioactive or oxidising material present, humidity and temperature decreased (Pressure)', 'blank'};
-            app.PressureDropDown.Position = [113 607 402 20];
+            app.PressureDropDown.Position = [101 604 402 20];
             app.PressureDropDown.Value = 'blank';
 
             % Create OxygenDropDownLabel
             app.OxygenDropDownLabel = uilabel(app.UIFigure);
             app.OxygenDropDownLabel.HorizontalAlignment = 'right';
             app.OxygenDropDownLabel.FontWeight = 'bold';
-            app.OxygenDropDownLabel.Position = [49 516 49 22];
+            app.OxygenDropDownLabel.Position = [37 513 49 22];
             app.OxygenDropDownLabel.Text = 'Oxygen';
 
             % Create OxygenDropDown
             app.OxygenDropDown = uidropdown(app.UIFigure);
             app.OxygenDropDown.Items = {'Test 1 vacuum pump on, no radioactive or oxidising material present (Oxygen)', 'Test 2 vacuum pump off, no radioactive or oxidising material present (Oxygen)', 'Test 3 185kBq radioactive source present and oxidising material not present (Oxygen)', 'Test 4 40kBq radioactive source present and oxidising material not present (Oxygen)', 'Test 5 0.5M Sodium Hydroxide present and radioactive source not present (Oxygen)', 'Test 6 0.01M Sodium Hydroxide present and radioactive source not present (Oxygen)', 'Test 7 vacuum pump on, no radioactive or acetone source present, temperature increased (Oxygen)', 'Test 8 vacuum pump off, no radioactive or oxidising material present, temperature increased (Oxygen)', 'Test 9 vacuum pump on, no radioactive or oxidising material present, temperature decreased (Oxygen)', 'Test 10 vacuum pump off, no radioactive or oxidising material present, temperature decreased (Oxygen)', 'Test 11 vacuum pump on, no radioactive or oxidising material present, humidity increased (Oxygen)', 'Test 12 vacuum pump off, no radioactive or oxidising material present, humidity increased (Oxygen)', 'Test 13 vacuum pump on, no radioactive or oxidising material present, humidity and temperature increased (Oxygen)', 'Test 14 vacuum pump off, no radioactive or oxidising material present, humidity and temperature increased (Oxygen)', 'Test 15 vacuum pump on, no radioactive or oxidising material present, humidity increased and temperature decreased (Oxygen)', 'Test 16 vacuum pump off, no radioactive or oxidising material present, humidity increased and temperature decreased (Oxygen)', 'Test 17 vacuum pump on, no radioactive or oxidising material present, humidity decreased (Oxygen)', 'Test 18 vacuum pump off, no radioactive or oxidising material present, humidity decreased (Oxygen)', 'Test 19 vacuum pump on, no radioactive or oxidising material present, humidity decreased and temperature increased (Oxygen)', 'Test 20 vacuum pump off, no radioactive or acetone sources present, humidity decreased and temperature increased (Oxygen)', 'Test 21 vacuum pump on, no radioactive or oxidising material present, humidity and temperature decreased (Oxygen)', 'Test 22 vacuum pump off, no radioactive or oxidising material present, humidity and temperature decreased (Oxygen)', 'blank'};
-            app.OxygenDropDown.Position = [113 516 402 20];
+            app.OxygenDropDown.Position = [101 513 402 20];
             app.OxygenDropDown.Value = 'blank';
 
             % Create RadiationDropDownLabel
             app.RadiationDropDownLabel = uilabel(app.UIFigure);
             app.RadiationDropDownLabel.HorizontalAlignment = 'right';
             app.RadiationDropDownLabel.FontWeight = 'bold';
-            app.RadiationDropDownLabel.Position = [42 427 60 22];
+            app.RadiationDropDownLabel.Position = [20 424 60 22];
             app.RadiationDropDownLabel.Text = 'Radiation';
 
             % Create RadiationDropDown
             app.RadiationDropDown = uidropdown(app.UIFigure);
             app.RadiationDropDown.Items = {'Test 1 vacuum pump on, no radioactive or oxidising material present (Radiation)', 'Test 2 vacuum pump off, no radioactive or oxidising material present (Radiation)', 'Test 3 185kBq radioactive source present and oxidising material not present (Radiation)', 'Test 4 40kBq radioactive source present and oxidising material not present (Radiation)', 'Test 5 0.5M Sodium Hydroxide present and radioactive source not present (Radiation)', 'Test 6 0.01M Sodium Hydroxide present and radioactive source not present (Radiation)', 'Test 7 vacuum pump on, no radioactive or acetone source present, temperature increased (Radiation)', 'Test 8 vacuum pump off, no radioactive or oxidising material present, temperature increased (Radiation)', 'Test 9 vacuum pump on, no radioactive or oxidising material present, temperature decreased (Radiation)', 'Test 10 vacuum pump off, no radioactive or oxidising material present, temperature decreased (Radiation)', 'Test 11 vacuum pump on, no radioactive or oxidising material present, humidity increased (Radiation)', 'Test 12 vacuum pump off, no radioactive or oxidising material present, humidity increased (Radiation)', 'Test 13 vacuum pump on, no radioactive or oxidising material present, humidity and temperature increased (Radiation)', 'Test 14 vacuum pump off, no radioactive or oxidising material present, humidity and temperature increased (Radiation)', 'Test 15 vacuum pump on, no radioactive or oxidising material present, humidity increased and temperature decreased (Radiation)', 'Test 16 vacuum pump off, no radioactive or oxidising material present, humidity increased and temperature decreased (Radiation)', 'Test 17 vacuum pump on, no radioactive or oxidising material present, humidity decreased (Radiation)', 'Test 18 vacuum pump off, no radioactive or oxidising material present, humidity decreased (Radiation)', 'Test 19 vacuum pump on, no radioactive or oxidising material present, humidity decreased and temperature increased (Radiation)', 'Test 20 vacuum pump off, no radioactive or acetone sources present, humidity decreased and temperature increased (Radiation)', 'Test 21 vacuum pump on, no radioactive or oxidising material present, humidity and temperature decreased (Radiation)', 'Test 22 vacuum pump off, no radioactive or oxidising material present, humidity and temperature decreased (Radiation)', 'blank'};
-            app.RadiationDropDown.Position = [117 427 402 20];
+            app.RadiationDropDown.Position = [95 424 402 20];
             app.RadiationDropDown.Value = 'blank';
 
             % Create OperatorGuideTextAreaLabel
             app.OperatorGuideTextAreaLabel = uilabel(app.UIFigure);
             app.OperatorGuideTextAreaLabel.HorizontalAlignment = 'right';
             app.OperatorGuideTextAreaLabel.FontWeight = 'bold';
-            app.OperatorGuideTextAreaLabel.Position = [18 321 94 22];
+            app.OperatorGuideTextAreaLabel.Position = [18 318 94 22];
             app.OperatorGuideTextAreaLabel.Text = 'Operator Guide';
 
             % Create OperatorGuideTextArea
             app.OperatorGuideTextArea = uitextarea(app.UIFigure);
             app.OperatorGuideTextArea.FontWeight = 'bold';
-            app.OperatorGuideTextArea.Position = [119 13 414 335];
+            app.OperatorGuideTextArea.Position = [119 10 414 335];
             app.OperatorGuideTextArea.Value = {'1) Select a variable drop down menu and select test.'; ''; '2) When test selected, press the plot button. '; ''; '3) If multiple tests or variables are wanting to be plotted, press the hold button each time an additional plot is added after the plot button is pressed.'; ''; '4)To reset plot set all variable drop down menus to blank and press the plot button.'; ''; '5) Alternatively reset plot by selecting one of the variable test''s and press plot and reset. Ensure other drop down menus are set to blank.'; ''; '6) Once a variable has been plotted, the number of set points are determined and the probability of failure is calculated. '; ''; '7) When a has been plotted a status message is presented, establishing whether the system is healthy or not.'; ''};
 
             % Create ResetButton
             app.ResetButton = uibutton(app.UIFigure, 'push');
             app.ResetButton.ButtonPushedFcn = createCallbackFcn(app, @ResetButtonPushed, true);
             app.ResetButton.FontWeight = 'bold';
-            app.ResetButton.Position = [458 374 61 29];
+            app.ResetButton.Position = [446 371 61 29];
             app.ResetButton.Text = 'Reset';
 
             % Create PlotButton
             app.PlotButton = uibutton(app.UIFigure, 'push');
             app.PlotButton.ButtonPushedFcn = createCallbackFcn(app, @PlotButtonPushed, true);
             app.PlotButton.FontWeight = 'bold';
-            app.PlotButton.Position = [117 374 61 29];
+            app.PlotButton.Position = [105 371 61 29];
             app.PlotButton.Text = 'Plot';
 
             % Create NumberofSetPointVialationsEditFieldLabel
             app.NumberofSetPointVialationsEditFieldLabel = uilabel(app.UIFigure);
             app.NumberofSetPointVialationsEditFieldLabel.HorizontalAlignment = 'right';
             app.NumberofSetPointVialationsEditFieldLabel.FontWeight = 'bold';
-            app.NumberofSetPointVialationsEditFieldLabel.Position = [565 776 259 22];
+            app.NumberofSetPointVialationsEditFieldLabel.Position = [657 771 259 22];
             app.NumberofSetPointVialationsEditFieldLabel.Text = 'Temperature Number of Set Point Vialations';
 
             % Create NumberofSetPointVialationsEditField
             app.NumberofSetPointVialationsEditField = uieditfield(app.UIFigure, 'numeric');
-            app.NumberofSetPointVialationsEditField.Position = [839 776 100 22];
+            app.NumberofSetPointVialationsEditField.Position = [931 771 100 22];
 
             % Create SetPointVialationsEditFieldLabel
             app.SetPointVialationsEditFieldLabel = uilabel(app.UIFigure);
             app.SetPointVialationsEditFieldLabel.HorizontalAlignment = 'right';
             app.SetPointVialationsEditFieldLabel.FontWeight = 'bold';
-            app.SetPointVialationsEditFieldLabel.Position = [559 742 274 22];
-            app.SetPointVialationsEditFieldLabel.Text = 'Chance of Failure on Next Glovebox Operation';
+            app.SetPointVialationsEditFieldLabel.Position = [545 737 380 22];
+            app.SetPointVialationsEditFieldLabel.Text = 'Probability of Maintenance Required for Temperature Instrument';
 
             % Create SetPointVialationPercentageEditField
             app.SetPointVialationPercentageEditField = uieditfield(app.UIFigure, 'numeric');
-            app.SetPointVialationPercentageEditField.Position = [839 742 100 22];
+            app.SetPointVialationPercentageEditField.Position = [931 737 100 22];
 
             % Create SetPointVialationsEditFieldLabel_2
             app.SetPointVialationsEditFieldLabel_2 = uilabel(app.UIFigure);
             app.SetPointVialationsEditFieldLabel_2.HorizontalAlignment = 'right';
             app.SetPointVialationsEditFieldLabel_2.FontWeight = 'bold';
-            app.SetPointVialationsEditFieldLabel_2.Position = [597 689 236 22];
+            app.SetPointVialationsEditFieldLabel_2.Position = [689 684 236 22];
             app.SetPointVialationsEditFieldLabel_2.Text = 'Humidity Number of Set Point Vialations';
 
             % Create NumberofSetPointVialationsEditField_2
             app.NumberofSetPointVialationsEditField_2 = uieditfield(app.UIFigure, 'numeric');
-            app.NumberofSetPointVialationsEditField_2.Position = [839 689 100 22];
+            app.NumberofSetPointVialationsEditField_2.Position = [931 684 100 22];
 
             % Create SetPointVialationsEditFieldLabel_3
             app.SetPointVialationsEditFieldLabel_3 = uilabel(app.UIFigure);
             app.SetPointVialationsEditFieldLabel_3.HorizontalAlignment = 'right';
             app.SetPointVialationsEditFieldLabel_3.FontWeight = 'bold';
-            app.SetPointVialationsEditFieldLabel_3.Position = [558 655 274 22];
-            app.SetPointVialationsEditFieldLabel_3.Text = 'Chance of Failure on Next Glovebox Operation';
+            app.SetPointVialationsEditFieldLabel_3.Position = [566 650 358 22];
+            app.SetPointVialationsEditFieldLabel_3.Text = 'Probability of Maintenance Required for Humidity Instrument';
 
             % Create SetPointVialationPercentageEditField_3
             app.SetPointVialationPercentageEditField_3 = uieditfield(app.UIFigure, 'numeric');
-            app.SetPointVialationPercentageEditField_3.Position = [838 655 100 22];
+            app.SetPointVialationPercentageEditField_3.Position = [930 650 100 22];
 
             % Create SetPointVialationsEditFieldLabel_4
             app.SetPointVialationsEditFieldLabel_4 = uilabel(app.UIFigure);
             app.SetPointVialationsEditFieldLabel_4.HorizontalAlignment = 'right';
             app.SetPointVialationsEditFieldLabel_4.FontWeight = 'bold';
-            app.SetPointVialationsEditFieldLabel_4.Position = [588 607 236 22];
+            app.SetPointVialationsEditFieldLabel_4.Position = [680 602 236 22];
             app.SetPointVialationsEditFieldLabel_4.Text = 'Pressure Number of Set Point Vialations';
 
             % Create NumberofSetPointVialationsEditField_4
             app.NumberofSetPointVialationsEditField_4 = uieditfield(app.UIFigure, 'numeric');
-            app.NumberofSetPointVialationsEditField_4.Position = [838 607 100 22];
+            app.NumberofSetPointVialationsEditField_4.Position = [930 602 100 22];
 
             % Create SetPointVialationsEditFieldLabel_5
             app.SetPointVialationsEditFieldLabel_5 = uilabel(app.UIFigure);
             app.SetPointVialationsEditFieldLabel_5.HorizontalAlignment = 'right';
             app.SetPointVialationsEditFieldLabel_5.FontWeight = 'bold';
-            app.SetPointVialationsEditFieldLabel_5.Position = [550 573 274 22];
-            app.SetPointVialationsEditFieldLabel_5.Text = 'Chance of Failure on Next Glovebox Operation';
+            app.SetPointVialationsEditFieldLabel_5.Position = [558 568 358 22];
+            app.SetPointVialationsEditFieldLabel_5.Text = 'Probability of Maintenance Required for Pressure Instrument';
 
             % Create SetPointVialationPercentageEditField_5
             app.SetPointVialationPercentageEditField_5 = uieditfield(app.UIFigure, 'numeric');
-            app.SetPointVialationPercentageEditField_5.Position = [838 573 100 22];
+            app.SetPointVialationPercentageEditField_5.Position = [930 568 100 22];
 
             % Create SetPointVialationsEditFieldLabel_6
             app.SetPointVialationsEditFieldLabel_6 = uilabel(app.UIFigure);
             app.SetPointVialationsEditFieldLabel_6.HorizontalAlignment = 'right';
             app.SetPointVialationsEditFieldLabel_6.FontWeight = 'bold';
-            app.SetPointVialationsEditFieldLabel_6.Position = [595 516 229 22];
+            app.SetPointVialationsEditFieldLabel_6.Position = [687 511 229 22];
             app.SetPointVialationsEditFieldLabel_6.Text = 'Oxygen Number of Set Point Vialations';
 
             % Create NumberofSetPointVialationsEditField_6
             app.NumberofSetPointVialationsEditField_6 = uieditfield(app.UIFigure, 'numeric');
-            app.NumberofSetPointVialationsEditField_6.Position = [839 516 100 22];
+            app.NumberofSetPointVialationsEditField_6.Position = [931 511 100 22];
 
             % Create SetPointVialationsEditFieldLabel_7
             app.SetPointVialationsEditFieldLabel_7 = uilabel(app.UIFigure);
             app.SetPointVialationsEditFieldLabel_7.HorizontalAlignment = 'right';
             app.SetPointVialationsEditFieldLabel_7.FontWeight = 'bold';
-            app.SetPointVialationsEditFieldLabel_7.Position = [559 482 274 22];
-            app.SetPointVialationsEditFieldLabel_7.Text = 'Chance of Failure on Next Glovebox Operation';
+            app.SetPointVialationsEditFieldLabel_7.Position = [562 477 363 22];
+            app.SetPointVialationsEditFieldLabel_7.Text = 'Probability of Maintenance Required for Radiation Instrument';
 
             % Create SetPointVialationPercentageEditField_7
             app.SetPointVialationPercentageEditField_7 = uieditfield(app.UIFigure, 'numeric');
-            app.SetPointVialationPercentageEditField_7.Position = [839 482 100 22];
+            app.SetPointVialationPercentageEditField_7.Position = [931 477 100 22];
 
             % Create SetPointVialationsEditFieldLabel_8
             app.SetPointVialationsEditFieldLabel_8 = uilabel(app.UIFigure);
             app.SetPointVialationsEditFieldLabel_8.HorizontalAlignment = 'right';
             app.SetPointVialationsEditFieldLabel_8.FontWeight = 'bold';
-            app.SetPointVialationsEditFieldLabel_8.Position = [584 427 240 22];
+            app.SetPointVialationsEditFieldLabel_8.Position = [676 422 240 22];
             app.SetPointVialationsEditFieldLabel_8.Text = 'Radiation Number of Set Point Vialations';
 
             % Create NumberofSetPointVialationsEditField_8
             app.NumberofSetPointVialationsEditField_8 = uieditfield(app.UIFigure, 'numeric');
-            app.NumberofSetPointVialationsEditField_8.Position = [839 427 100 22];
+            app.NumberofSetPointVialationsEditField_8.Position = [931 422 100 22];
 
             % Create SetPointVialationsEditFieldLabel_9
             app.SetPointVialationsEditFieldLabel_9 = uilabel(app.UIFigure);
             app.SetPointVialationsEditFieldLabel_9.HorizontalAlignment = 'right';
             app.SetPointVialationsEditFieldLabel_9.FontWeight = 'bold';
-            app.SetPointVialationsEditFieldLabel_9.Position = [559 393 274 22];
-            app.SetPointVialationsEditFieldLabel_9.Text = 'Chance of Failure on Next Glovebox Operation';
+            app.SetPointVialationsEditFieldLabel_9.Position = [575 388 350 22];
+            app.SetPointVialationsEditFieldLabel_9.Text = 'Probability of Maintenance Required for Oxygen Instrument';
 
             % Create SetPointVialationPercentageEditField_9
             app.SetPointVialationPercentageEditField_9 = uieditfield(app.UIFigure, 'numeric');
-            app.SetPointVialationPercentageEditField_9.Position = [839 393 100 22];
+            app.SetPointVialationPercentageEditField_9.Position = [931 388 100 22];
 
             % Create TemperatureSystemStatusMessageLabel
             app.TemperatureSystemStatusMessageLabel = uilabel(app.UIFigure);
@@ -6940,7 +6940,7 @@ classdef Predictive_Maintenance_GUI_Joshua_Donald < matlab.apps.AppBase
             app.TemperatureSystemStatusMessageLabel.WordWrap = 'on';
             app.TemperatureSystemStatusMessageLabel.FontSize = 20;
             app.TemperatureSystemStatusMessageLabel.FontWeight = 'bold';
-            app.TemperatureSystemStatusMessageLabel.Position = [540 297 1119 54];
+            app.TemperatureSystemStatusMessageLabel.Position = [540 294 1194 54];
             app.TemperatureSystemStatusMessageLabel.Text = 'System Temperature Status Message';
 
             % Create HumiditySystemStatusMessageLabel
@@ -6950,7 +6950,7 @@ classdef Predictive_Maintenance_GUI_Joshua_Donald < matlab.apps.AppBase
             app.HumiditySystemStatusMessageLabel.WordWrap = 'on';
             app.HumiditySystemStatusMessageLabel.FontSize = 20;
             app.HumiditySystemStatusMessageLabel.FontWeight = 'bold';
-            app.HumiditySystemStatusMessageLabel.Position = [540 226 1119 72];
+            app.HumiditySystemStatusMessageLabel.Position = [540 223 1194 72];
             app.HumiditySystemStatusMessageLabel.Text = 'System Humidity Status Message';
 
             % Create PressureSystemStatusMessageLabel
@@ -6960,7 +6960,7 @@ classdef Predictive_Maintenance_GUI_Joshua_Donald < matlab.apps.AppBase
             app.PressureSystemStatusMessageLabel.WordWrap = 'on';
             app.PressureSystemStatusMessageLabel.FontSize = 20;
             app.PressureSystemStatusMessageLabel.FontWeight = 'bold';
-            app.PressureSystemStatusMessageLabel.Position = [540 155 1119 72];
+            app.PressureSystemStatusMessageLabel.Position = [540 152 1194 72];
             app.PressureSystemStatusMessageLabel.Text = 'System Pressure Status Message';
 
             % Create OxygenSystemStatusMessageLabel
@@ -6970,7 +6970,7 @@ classdef Predictive_Maintenance_GUI_Joshua_Donald < matlab.apps.AppBase
             app.OxygenSystemStatusMessageLabel.WordWrap = 'on';
             app.OxygenSystemStatusMessageLabel.FontSize = 20;
             app.OxygenSystemStatusMessageLabel.FontWeight = 'bold';
-            app.OxygenSystemStatusMessageLabel.Position = [540 84 1119 72];
+            app.OxygenSystemStatusMessageLabel.Position = [540 81 1194 72];
             app.OxygenSystemStatusMessageLabel.Text = 'System Oxygen Status Message';
 
             % Create RadiationSystemStatusMessageLabel
@@ -6980,37 +6980,37 @@ classdef Predictive_Maintenance_GUI_Joshua_Donald < matlab.apps.AppBase
             app.RadiationSystemStatusMessageLabel.WordWrap = 'on';
             app.RadiationSystemStatusMessageLabel.FontSize = 20;
             app.RadiationSystemStatusMessageLabel.FontWeight = 'bold';
-            app.RadiationSystemStatusMessageLabel.Position = [540 13 1119 72];
+            app.RadiationSystemStatusMessageLabel.Position = [540 10 1194 72];
             app.RadiationSystemStatusMessageLabel.Text = 'System Radiation Status Message';
 
             % Create Label
             app.Label = uilabel(app.UIFigure);
             app.Label.FontWeight = 'bold';
-            app.Label.Position = [938 742 13 22];
+            app.Label.Position = [1035 737 13 22];
             app.Label.Text = '%';
 
             % Create Label_2
             app.Label_2 = uilabel(app.UIFigure);
             app.Label_2.FontWeight = 'bold';
-            app.Label_2.Position = [938 655 13 22];
+            app.Label_2.Position = [1035 650 13 22];
             app.Label_2.Text = '%';
 
             % Create Label_3
             app.Label_3 = uilabel(app.UIFigure);
             app.Label_3.FontWeight = 'bold';
-            app.Label_3.Position = [937 573 13 22];
+            app.Label_3.Position = [1029 568 13 22];
             app.Label_3.Text = '%';
 
             % Create Label_4
             app.Label_4 = uilabel(app.UIFigure);
             app.Label_4.FontWeight = 'bold';
-            app.Label_4.Position = [938 482 13 22];
+            app.Label_4.Position = [1035 477 13 22];
             app.Label_4.Text = '%';
 
             % Create Label_5
             app.Label_5 = uilabel(app.UIFigure);
             app.Label_5.FontWeight = 'bold';
-            app.Label_5.Position = [937 393 13 22];
+            app.Label_5.Position = [1035 388 13 22];
             app.Label_5.Text = '%';
 
             % Create UIAxes
@@ -7030,7 +7030,7 @@ classdef Predictive_Maintenance_GUI_Joshua_Donald < matlab.apps.AppBase
             app.UIAxes.XGrid = 'on';
             app.UIAxes.YGrid = 'on';
             app.UIAxes.Box = 'on';
-            app.UIAxes.Position = [968 321 669 548];
+            app.UIAxes.Position = [1065 330 669 548];
 
             % Show the figure after all components are created
             app.UIFigure.Visible = 'on';
