@@ -1,4 +1,4 @@
-classdef Predictive_Maintenance_GUI_Joshua_Donald < matlab.apps.AppBase
+classdef Glovebox_Environment_Monitoring_System_Joshua_Donald < matlab.apps.AppBase
 
     % Properties that correspond to app components
     properties (Access = public)
@@ -6728,7 +6728,7 @@ classdef Predictive_Maintenance_GUI_Joshua_Donald < matlab.apps.AppBase
             app.GloveboxEnvironmentMonitoringSystemLabel = uilabel(app.UIFigure);
             app.GloveboxEnvironmentMonitoringSystemLabel.FontSize = 20;
             app.GloveboxEnvironmentMonitoringSystemLabel.FontWeight = 'bold';
-            app.GloveboxEnvironmentMonitoringSystemLabel.Position = [670 839 414 27];
+            app.GloveboxEnvironmentMonitoringSystemLabel.Position = [670 840 414 27];
             app.GloveboxEnvironmentMonitoringSystemLabel.Text = 'Glovebox Environment Monitoring System';
 
             % Create TemperatureDropDownLabel
@@ -6832,7 +6832,7 @@ classdef Predictive_Maintenance_GUI_Joshua_Donald < matlab.apps.AppBase
 
             % Create NumberofSetPointVialationsEditField
             app.NumberofSetPointVialationsEditField = uieditfield(app.UIFigure, 'numeric');
-            app.NumberofSetPointVialationsEditField.Position = [931 771 100 22];
+            app.NumberofSetPointVialationsEditField.Position = [931 772 55 21];
 
             % Create SetPointVialationsEditFieldLabel
             app.SetPointVialationsEditFieldLabel = uilabel(app.UIFigure);
@@ -6843,7 +6843,7 @@ classdef Predictive_Maintenance_GUI_Joshua_Donald < matlab.apps.AppBase
 
             % Create SetPointVialationPercentageEditField
             app.SetPointVialationPercentageEditField = uieditfield(app.UIFigure, 'numeric');
-            app.SetPointVialationPercentageEditField.Position = [931 737 100 22];
+            app.SetPointVialationPercentageEditField.Position = [931 737 55 22];
 
             % Create SetPointVialationsEditFieldLabel_2
             app.SetPointVialationsEditFieldLabel_2 = uilabel(app.UIFigure);
@@ -6854,7 +6854,7 @@ classdef Predictive_Maintenance_GUI_Joshua_Donald < matlab.apps.AppBase
 
             % Create NumberofSetPointVialationsEditField_2
             app.NumberofSetPointVialationsEditField_2 = uieditfield(app.UIFigure, 'numeric');
-            app.NumberofSetPointVialationsEditField_2.Position = [931 684 100 22];
+            app.NumberofSetPointVialationsEditField_2.Position = [931 684 55 22];
 
             % Create SetPointVialationsEditFieldLabel_3
             app.SetPointVialationsEditFieldLabel_3 = uilabel(app.UIFigure);
@@ -6865,7 +6865,7 @@ classdef Predictive_Maintenance_GUI_Joshua_Donald < matlab.apps.AppBase
 
             % Create SetPointVialationPercentageEditField_3
             app.SetPointVialationPercentageEditField_3 = uieditfield(app.UIFigure, 'numeric');
-            app.SetPointVialationPercentageEditField_3.Position = [930 650 100 22];
+            app.SetPointVialationPercentageEditField_3.Position = [930 648 56 24];
 
             % Create SetPointVialationsEditFieldLabel_4
             app.SetPointVialationsEditFieldLabel_4 = uilabel(app.UIFigure);
@@ -6876,7 +6876,7 @@ classdef Predictive_Maintenance_GUI_Joshua_Donald < matlab.apps.AppBase
 
             % Create NumberofSetPointVialationsEditField_4
             app.NumberofSetPointVialationsEditField_4 = uieditfield(app.UIFigure, 'numeric');
-            app.NumberofSetPointVialationsEditField_4.Position = [930 602 100 22];
+            app.NumberofSetPointVialationsEditField_4.Position = [930 602 56 22];
 
             % Create SetPointVialationsEditFieldLabel_5
             app.SetPointVialationsEditFieldLabel_5 = uilabel(app.UIFigure);
@@ -6887,7 +6887,7 @@ classdef Predictive_Maintenance_GUI_Joshua_Donald < matlab.apps.AppBase
 
             % Create SetPointVialationPercentageEditField_5
             app.SetPointVialationPercentageEditField_5 = uieditfield(app.UIFigure, 'numeric');
-            app.SetPointVialationPercentageEditField_5.Position = [930 568 100 22];
+            app.SetPointVialationPercentageEditField_5.Position = [930 568 56 22];
 
             % Create SetPointVialationsEditFieldLabel_6
             app.SetPointVialationsEditFieldLabel_6 = uilabel(app.UIFigure);
@@ -6898,40 +6898,40 @@ classdef Predictive_Maintenance_GUI_Joshua_Donald < matlab.apps.AppBase
 
             % Create NumberofSetPointVialationsEditField_6
             app.NumberofSetPointVialationsEditField_6 = uieditfield(app.UIFigure, 'numeric');
-            app.NumberofSetPointVialationsEditField_6.Position = [931 511 100 22];
+            app.NumberofSetPointVialationsEditField_6.Position = [931 511 55 22];
 
             % Create SetPointVialationsEditFieldLabel_7
             app.SetPointVialationsEditFieldLabel_7 = uilabel(app.UIFigure);
             app.SetPointVialationsEditFieldLabel_7.HorizontalAlignment = 'right';
             app.SetPointVialationsEditFieldLabel_7.FontWeight = 'bold';
-            app.SetPointVialationsEditFieldLabel_7.Position = [562 477 363 22];
-            app.SetPointVialationsEditFieldLabel_7.Text = 'Probability of Maintenance Required for Radiation Instrument';
+            app.SetPointVialationsEditFieldLabel_7.Position = [575 477 350 22];
+            app.SetPointVialationsEditFieldLabel_7.Text = 'Probability of Maintenance Required for Oxygen Instrument';
 
             % Create SetPointVialationPercentageEditField_7
             app.SetPointVialationPercentageEditField_7 = uieditfield(app.UIFigure, 'numeric');
-            app.SetPointVialationPercentageEditField_7.Position = [931 477 100 22];
+            app.SetPointVialationPercentageEditField_7.Position = [931 477 55 22];
 
             % Create SetPointVialationsEditFieldLabel_8
             app.SetPointVialationsEditFieldLabel_8 = uilabel(app.UIFigure);
             app.SetPointVialationsEditFieldLabel_8.HorizontalAlignment = 'right';
             app.SetPointVialationsEditFieldLabel_8.FontWeight = 'bold';
-            app.SetPointVialationsEditFieldLabel_8.Position = [676 422 240 22];
+            app.SetPointVialationsEditFieldLabel_8.Position = [678 424 240 22];
             app.SetPointVialationsEditFieldLabel_8.Text = 'Radiation Number of Set Point Vialations';
 
             % Create NumberofSetPointVialationsEditField_8
             app.NumberofSetPointVialationsEditField_8 = uieditfield(app.UIFigure, 'numeric');
-            app.NumberofSetPointVialationsEditField_8.Position = [931 422 100 22];
+            app.NumberofSetPointVialationsEditField_8.Position = [931 424 55 22];
 
             % Create SetPointVialationsEditFieldLabel_9
             app.SetPointVialationsEditFieldLabel_9 = uilabel(app.UIFigure);
             app.SetPointVialationsEditFieldLabel_9.HorizontalAlignment = 'right';
             app.SetPointVialationsEditFieldLabel_9.FontWeight = 'bold';
-            app.SetPointVialationsEditFieldLabel_9.Position = [575 388 350 22];
-            app.SetPointVialationsEditFieldLabel_9.Text = 'Probability of Maintenance Required for Oxygen Instrument';
+            app.SetPointVialationsEditFieldLabel_9.Position = [562 378 363 22];
+            app.SetPointVialationsEditFieldLabel_9.Text = 'Probability of Maintenance Required for Radiation Instrument';
 
             % Create SetPointVialationPercentageEditField_9
             app.SetPointVialationPercentageEditField_9 = uieditfield(app.UIFigure, 'numeric');
-            app.SetPointVialationPercentageEditField_9.Position = [931 388 100 22];
+            app.SetPointVialationPercentageEditField_9.Position = [931 380 55 20];
 
             % Create TemperatureSystemStatusMessageLabel
             app.TemperatureSystemStatusMessageLabel = uilabel(app.UIFigure);
@@ -6986,31 +6986,31 @@ classdef Predictive_Maintenance_GUI_Joshua_Donald < matlab.apps.AppBase
             % Create Label
             app.Label = uilabel(app.UIFigure);
             app.Label.FontWeight = 'bold';
-            app.Label.Position = [1035 737 13 22];
+            app.Label.Position = [993 737 13 22];
             app.Label.Text = '%';
 
             % Create Label_2
             app.Label_2 = uilabel(app.UIFigure);
             app.Label_2.FontWeight = 'bold';
-            app.Label_2.Position = [1035 650 13 22];
+            app.Label_2.Position = [993 650 13 22];
             app.Label_2.Text = '%';
 
             % Create Label_3
             app.Label_3 = uilabel(app.UIFigure);
             app.Label_3.FontWeight = 'bold';
-            app.Label_3.Position = [1029 568 13 22];
+            app.Label_3.Position = [993 568 13 22];
             app.Label_3.Text = '%';
 
             % Create Label_4
             app.Label_4 = uilabel(app.UIFigure);
             app.Label_4.FontWeight = 'bold';
-            app.Label_4.Position = [1035 477 13 22];
+            app.Label_4.Position = [993 477 13 22];
             app.Label_4.Text = '%';
 
             % Create Label_5
             app.Label_5 = uilabel(app.UIFigure);
             app.Label_5.FontWeight = 'bold';
-            app.Label_5.Position = [1035 388 13 22];
+            app.Label_5.Position = [993 378 13 22];
             app.Label_5.Text = '%';
 
             % Create UIAxes
@@ -7022,6 +7022,7 @@ classdef Predictive_Maintenance_GUI_Joshua_Donald < matlab.apps.AppBase
             app.UIAxes.AmbientLightColor = [0 0 0];
             app.UIAxes.PlotBoxAspectRatio = [1.72831632653061 1 1];
             app.UIAxes.FontName = 'Georgia';
+            app.UIAxes.FontWeight = 'bold';
             app.UIAxes.Layer = 'top';
             app.UIAxes.GridLineStyle = '--';
             app.UIAxes.XColor = [0 0 0];
@@ -7041,7 +7042,7 @@ classdef Predictive_Maintenance_GUI_Joshua_Donald < matlab.apps.AppBase
     methods (Access = public)
 
         % Construct app
-        function app = Predictive_Maintenance_GUI_Joshua_Donald
+        function app = Glovebox_Environment_Monitoring_System_Joshua_Donald
 
             % Create UIFigure and components
             createComponents(app)
