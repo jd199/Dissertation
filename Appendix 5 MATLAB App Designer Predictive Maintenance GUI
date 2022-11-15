@@ -1,4 +1,4 @@
-classdef Glovebox_Environment_Monitoring_System_Joshua_Donald < matlab.apps.AppBase
+classdef Glovebox_Predictive_Maintenance_System_Joshua_Donald < matlab.apps.AppBase
 
     % Properties that correspond to app components
     properties (Access = public)
@@ -7,7 +7,7 @@ classdef Glovebox_Environment_Monitoring_System_Joshua_Donald < matlab.apps.AppB
         Image                           matlab.ui.control.Image
         Image_2                         matlab.ui.control.Image
         Image_3                         matlab.ui.control.Image
-        GloveboxEnvironmentMonitoringSystemLabel  matlab.ui.control.Label
+        GloveboxPredictiveMaintenanceSystemLabel  matlab.ui.control.Label
         TemperatureDropDownLabel        matlab.ui.control.Label
         TemperatureDropDown             matlab.ui.control.DropDown
         HumidityDropDownLabel           matlab.ui.control.Label
@@ -6724,12 +6724,12 @@ classdef Glovebox_Environment_Monitoring_System_Joshua_Donald < matlab.apps.AppB
             app.Image_3.Position = [18 815 100 100];
             app.Image_3.ImageSource = 'Screenshot 2022-06-30 at 20.11.58.png';
 
-            % Create GloveboxEnvironmentMonitoringSystemLabel
-            app.GloveboxEnvironmentMonitoringSystemLabel = uilabel(app.UIFigure);
-            app.GloveboxEnvironmentMonitoringSystemLabel.FontSize = 20;
-            app.GloveboxEnvironmentMonitoringSystemLabel.FontWeight = 'bold';
-            app.GloveboxEnvironmentMonitoringSystemLabel.Position = [670 840 414 27];
-            app.GloveboxEnvironmentMonitoringSystemLabel.Text = 'Glovebox Environment Monitoring System';
+            % Create GloveboxPredictiveMaintenanceSystemLabel
+            app.GloveboxPredictiveMaintenanceSystemLabel = uilabel(app.UIFigure);
+            app.GloveboxPredictiveMaintenanceSystemLabel.FontSize = 20;
+            app.GloveboxPredictiveMaintenanceSystemLabel.FontWeight = 'bold';
+            app.GloveboxPredictiveMaintenanceSystemLabel.Position = [670 840 408 27];
+            app.GloveboxPredictiveMaintenanceSystemLabel.Text = 'Glovebox Predictive Maintenance System';
 
             % Create TemperatureDropDownLabel
             app.TemperatureDropDownLabel = uilabel(app.UIFigure);
@@ -7042,7 +7042,7 @@ classdef Glovebox_Environment_Monitoring_System_Joshua_Donald < matlab.apps.AppB
     methods (Access = public)
 
         % Construct app
-        function app = Glovebox_Environment_Monitoring_System_Joshua_Donald
+        function app = Glovebox_Predictive_Maintenance_System_Joshua_Donald
 
             % Create UIFigure and components
             createComponents(app)
