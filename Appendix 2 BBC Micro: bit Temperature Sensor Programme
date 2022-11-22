@@ -37,4 +37,4 @@ uBit.sleep(1000);
 //Stop program. 
 release_fiber();
 }
-// Harry Fairhead, 2021 [48]
+// Harry Fairhead, 2021 
