@@ -38,4 +38,5 @@ uBit.sleep(1000);
 //Stop program. 
 release_fiber();
 
-//(Harry Fairhead, 2021)
+// (Fairhead, 2021) [48]
+
